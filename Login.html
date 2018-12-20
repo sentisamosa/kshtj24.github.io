@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Login</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="LoginStyle.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>	
+		<div class="container">
+			<div class="card card-container">
+				<img id="profile-img" class="profile-img-card" src="siti_network.png"/>
+				<p id="profile-name" class="profile-name-card">Monthly Payout Login</p>
+				
+				<form class="form-signin">
+					<span id="reauth-email" class="auth-email"></span>
+					<input type = "text" id="inputEmail" class="form-control" placeholder = "User name" required autofocus/>
+					<input type = "password" id="inputPassword" class="form-control" placeholder = "Password" required/>
+					<!-- <input type= "submit" class="btn btn-lg btn-primary btn-block btn-signin" value="Sign In"/> -->
+					<button class="btn btn-lg btn-primary btn-block btn-signin" onclick="window.location='Landing.html'">Sign In</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
+

@@ -30,5 +30,12 @@ function sendButtonClicked(e)
 		sendData[key] = value;
 	}
 	
-	msgRef.push(sendData);
+	msgRef.push(sendData, function(error){
+		if (error)
+			alert("I couldn't receive your message! Please try again.");
+		else{
+			if(confirm('I have received your message successfully. Thank you!'))
+				window.location.reload();			
+		}
+	});
 }

@@ -3,8 +3,7 @@
 	<head>
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="pageScript.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
 		<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
 		<style>
 			body {font-family: "Roboto", sans-serif;}
@@ -22,6 +21,15 @@
 			}
 
 			input[type=submit] {
+			  background-color: #4CAF50;
+			  color: white;
+			  padding: 12px 20px;
+			  border: none;
+			  border-radius: 4px;
+			  cursor: pointer;
+			}
+			
+			button[type=button] {
 			  background-color: #4CAF50;
 			  color: white;
 			  padding: 12px 20px;
@@ -58,21 +66,19 @@
 			<a href="#" class="w3-bar-item w3-button w3-padding-large">My Work</a>			
 		  </div>
 		</div>
-		
-		
 
 		<div class="w3-content" style="max-width:1400px;margin-top:4vw;">
 		
 		  <form class="w3-panel w3-card-4 w3-padding-large w3-border" style="margin-left:15vw;margin-right:15vw;">
 			<h3>Contact Form</h3>
-			<label for="fname">First Name</label>
-			<input type="text" id="fname" name="firstname" placeholder="Your name..">
+			<label for="name">Name</label>
+			<input type="text" id="name" data-key='name' class='user-input' placeholder="Your name..">
 
-			<label for="lname">Last Name</label>
-			<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+			<label for="email">e-Mail</label>
+			<input type="text" id="email" data-key='email' class='user-input' placeholder="Your email..">			
 
 			<label for="country">Country</label>
-			<select id="country" name="country">
+			<select id="country" data-key='country' class='user-input'>
 				<option value="Afghanistan">Afghanistan</option>
 				<option value="Albania">Albania</option>
 				<option value="Algeria">Algeria</option>
@@ -314,11 +320,14 @@
 				<option value="Zimbabwe">Zimbabwe</option>
 			</select>
 
-			<label for="subject">Subject</label>
-			<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+			<label for="message">Message</label>
+			<textarea id="msg" data-key='message' class='user-input' placeholder="Write something.." style="height:200px"></textarea>
 
-			<input type="submit" value="Submit">
+			<button type="button" id="send" name="send">Send</button>
 		  </form>
 		</div>
+		
+		<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+		<script type="text/javascript" src="app.js"></script>
 	</body>
 </html>

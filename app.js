@@ -9,34 +9,26 @@ var config = {
 };
 firebase.initializeApp(config);
 
-
 const dbRef = firebase.database().ref();
-const usersRef = dbRef.child('users');
+const msgRef = dbRef.child('messages');
+const sendButton = document.getElementById("send");
 
-const userListUI = document.getElementById("userList");
+sendButton.addEventListener("click", sendButtonClicked);
 
-usersRef.on("child_added", snap => {
-   let user = snap.val();
-   let $li = document.createElement("li");
-   $li.innerHTML = user.name;
-   $li.setAttribute("child-key", snap.key); 
-   $li.addEventListener("click", userClicked)
-   userListUI.append($li);
-});
 
-function userClicked(e) {
-
-  var userID = e.target.getAttribute("child-key");
-
-  const userRef = dbRef.child('users/' + userID);
-
-  const userDetailUI = document.getElementById("userDetail");
-  userDetailUI.innerHTML = ""
-
-  userRef.on("child_added", snap => {
-    var $p = document.createElement("p");
-    $p.innerHTML = snap.key + " - " + snap.val()
-    userDetailUI.append($p);
-  });
-
+function sendButtonClicked(e)
+{
+	const sendMessageInputUI = document.getElementsByClassName("user-input");
+	
+	let sendData = {};
+	
+	for(let i = 0, len = sendMessageInputUI.length; i < len; i++)
+	{
+		let key = sendMessageInputUI[i].getAttribute('data-key');
+		let value = sendMessageInputUI[i].value;
+		
+		sendData[key] = value;
+	}
+	
+	msgRef.push(sendData);
 }

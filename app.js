@@ -16,8 +16,7 @@ const sendButton = document.getElementById("send");
 sendButton.addEventListener("click", sendButtonClicked);
 
 
-function sendButtonClicked(e)
-{
+function sendButtonClicked(e){
 	const sendMessageInputUI = document.getElementsByClassName("user-input");
 	
 	let sendData = {};

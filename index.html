@@ -10,8 +10,7 @@
 <style>
 body, html {
   height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;  
 }
 
 .hero-image {
@@ -29,7 +28,7 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: black;
 }
 
 .hero-text button {
@@ -47,21 +46,26 @@ body, html {
   background-color: #555;
   color: white;
 }
+
+img{
+	border-radius: 50%;
+	height:20vw;
+	width:20vw;	
+}
 </style>
 </head>
-<body>
+<body class="w3-white" onload="indexOnLoad()">
 
-<div class="hero-image">
+<div class="">
   <div class="hero-text">
-    <h1 style="font-size:50px">I am Kshitij Saxena</h1>
-    <p>And I'm a software engineer</p>
+  <img src = "./media/profilepic.jpg"/>
+    <h1 id ="heading" style="font-size:50px"></h1>
+    <p id="description">And I'm a software engineer</p>
     <button onclick="location.href='my_resume.html';">My Resume</button>
 	<button onclick="location.href='my_work.html';">My Work</button>
 	<button onclick="location.href='contact.html';">Contact Me</button>
   </div>
 </div>
-
-<!-- <p>Page Content..</p> -->
-
+<script src="./scripts/pageScript.js"></script>
 </body>
 </html>

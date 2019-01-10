@@ -7,21 +7,22 @@ function myFunction() {
   }
 }
 
-function indexOnLoad(){
-	var headingText = 'I am Kshitij Saxena';
-	const elemnt = document.getElementById('heading');
-	
-	recursiveTyper(headingText, elemnt);
+var headingText = 'I am Kshitij Saxena';
+var i = 0;
+const elemnt = document.getElementById('heading');
+
+function indexOnLoad(){	
+	setInterval(recursiveTyper,100);
 }
 
 
-function recursiveTyper(txt, elemnt){
-	
-	if(txt.length > 0){
-		elemnt.innerHTML += txt.charAt(0);
-		txt = txt.substring(1,txt.length);
-		setTimeout(recursiveTyper(txt,elemnt),5000);
-	}	
+function recursiveTyper(){	
+	if(i < headingText.length){
+		elemnt.innerHTML += headingText.charAt(i);
+		i++;
+	}
+	else
+		clearInterval();
 }
 
 // function recursiveTyper(txt, elemnt){

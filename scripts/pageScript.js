@@ -8,18 +8,35 @@ function myFunction() {
 }
 
 var headingText = 'I am Kshitij Saxena';
+var descriptionText = 'And I am a Software Engineer';
 var i = 0;
+var j = 0;
+
 const elemnt = document.getElementById('heading');
+const elemnt1 = document.getElementById('description');
 
 function indexOnLoad(){	
-	setInterval(recursiveTyper,100);
+	setInterval(headTyper,100);
 }
 
 
-function recursiveTyper(){	
+function headTyper(){	
 	if(i < headingText.length){
 		elemnt.innerHTML += headingText.charAt(i);
 		i++;
+	}
+	else{
+		clearInterval();
+		setInterval(pTyper,500);
+	}
+}
+
+
+
+function pTyper(){	
+	if(j < descriptionText.length){
+		elemnt1.innerHTML += descriptionText.charAt(j);
+		j++;
 	}
 	else
 		clearInterval();

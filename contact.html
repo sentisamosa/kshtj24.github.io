@@ -72,10 +72,10 @@
 		  <form class="w3-panel w3-card-4 w3-padding-large w3-border" style="margin-left:15vw;margin-right:15vw;">
 			<h3>Leave me a message</h3>
 			<label for="name">Name</label>
-			<input type="text" id="name" data-key='name' class='user-input' placeholder="Your name..">
+			<input type="text" id="name" data-key='name' class='user-input' placeholder="Your name.." required>
 
 			<label for="email">e-Mail</label>
-			<input type="text" id="email" data-key='email' class='user-input' placeholder="Your email..">			
+			<input type="text" id="email" data-key='email' class='user-input' placeholder="Your email.." required>			
 
 			<label for="country">Country</label>
 			<select id="country" data-key='country' class='user-input'>
@@ -321,7 +321,7 @@
 			</select>
 
 			<label for="message">Message</label>
-			<textarea id="msg" data-key='message' class='user-input' placeholder="Write something.." style="height:200px"></textarea>
+			<textarea id="msg" data-key='message' class='user-input' placeholder="Write something.." style="height:200px" required></textarea>
 
 			<button type="button" id="send" name="send">Send</button>
 		  </form>

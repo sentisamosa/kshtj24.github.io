@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* CSS class selector */
+      .floatingLeft {
+        float: left;
+      }
+
+      .floatingRight {
+        float: right;
+      }
+
+      .clear {
+        clear: both;
+        display: block;
+      }
+      .inlined {
+        display: inline;
+      }
+
+      .inlineblocked {
+        display: inline-block;
+      }
+
+      .navItem {
+        background-color: #eff;
+        padding: 10px;
+      }
+
+      /* CSS Control Selector */
+      header {
+        background-color: #333;
+      }
+
+      footer {
+        text-align: center;
+        background-color: #333;
+        color: white;
+        padding: 5px;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* CSS ID Selector */
+      #logo {
+        width: 65px;
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      ul#navmenu li {
+        display: inline;
+        position: relative;
+        top: 15px;
+        right: 20px;
+        margin-right: 15px;
+      }
+
+      ul#navmenu a {
+        border-width: 1px;
+        border-color: whitesmoke;
+        border-radius: 5px;
+        border-style: solid;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+        background-color: black;
+        color: whitesmoke;
+        text-decoration-line: none;
+      }
+      #sideNav {
+        width: 20%;
+        background-color: #ccf;
+        margin-top: 20px;
+      }
+
+      #sideNav ul {
+        list-style-type: none;
+      }
+
+      #contentMain {
+        width: 79%;
+      }
+
+      #contentImg {
+        width: 300px;
+        display: block;
+        margin: auto;
+      }
+
+      div#sideNav a {
+        text-decoration-line: none;
+      }
+
+      div#sideNav h3 {
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <a href="#" target="_self">
+          <img
+            src="https://i.imgur.com/U4g8OjT.png"
+            alt="Logo"
+            class="floatingLeft"
+            id="logo"
+        /></a>
+        <nav>
+          <ul id="navmenu" class="floatingRight">
+            <li><a href="">About Us</a></li>
+            <li><a href="">Our Works</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+        </nav>
+        <span class="clear"></span>
+      </header>
+      <div>
+        <div id="sideNav" class="floatingLeft">
+          <div><h3>Navigation</h3></div>
+          <div class="navItem"><a href="">About Us</a></div>
+          <div class="navItem"><a href="">Our Works</a></div>
+          <div class="navItem"><a href="">Contact Us</a></div>
+        </div>
+
+        <article id="contentMain" class="floatingRight">
+          <h1>Ice Cream Shops at Jurrasic Park</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda,
+            veniam molestiae, quia nobis beatae sed molestias quae, a debitis
+            dicta aperiam! Vitae maiores consequatur sequi optio odio libero
+            cupiditate unde?
+          </p>
+          <p>
+            Atque consequatur, nam blanditiis molestiae itaque labore pariatur,
+            eum corrupti quae dignissimos facere ipsa totam possimus. Cumque
+            distinctio laboriosam magnam praesentium error tempora, cum, soluta
+            facilis ipsa aperiam hic maxime?
+          </p>
+          <img
+            id="contentImg"
+            src="https://i.imgur.com/Z1fqcxx.png"
+            alt="contentimage"
+          />
+          <p>
+            Dignissimos impedit nobis quos iste, deleniti rerum sit ab rem,
+            voluptatem vel ipsa quasi nostrum? Fugit quos deserunt perferendis
+            adipisci, optio id, iure numquam, voluptas veniam voluptatibus sed
+            magnam dolores.
+          </p>
+          <p>
+            Consequuntur sed, accusantium temporibus, eveniet officia voluptas
+            inventore omnis iure suscipit quos aliquam dolores ab expedita iste,
+            neque ducimus fuga. Saepe nobis error blanditiis magnam eius
+            perspiciatis repellat reiciendis vero.
+          </p>
+        </article>
+
+        <span class="clear"></span>
+      </div>
+      <footer>
+        <p>Copyright &copy; 2020 Kshitij Ltd.</p>
+      </footer>
+    </main>
+  </body>
+</html>

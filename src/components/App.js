@@ -2,7 +2,12 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./Home";
 
-const pages = [{ pageName: "Home", pagePath: "/", pageItem: <Home /> }, {}, {}];
+const pages = [
+  { pageName: "Home", pagePath: "/", pageItem: <Home /> },
+  { pageName: "My Resume", pagePath: "/resume", pageItem: <Home /> },
+  { pageName: "My Work", pagePath: "/work", pageItem: <Home /> },
+  { pageName: "Contact Me", pagePath: "/shoutout", pageItem: <Home /> }
+];
 
 class App extends Component {
   render() {
